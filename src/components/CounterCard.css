@@ -1,0 +1,96 @@
+/* CounterCard styles moved from styled-components to plain CSS using CSS variables */
+.counter-card {
+  background: var(--card-bg);
+  padding: 1.25rem 1.5rem 1.75rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(12, 18, 30, 0.12);
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.counter-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 6px;
+  width: 100%;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  background: var(--button-bg);
+}
+
+.counter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.counter-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.counter-badge {
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  border: 1px solid var(--border);
+}
+
+.counter-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+  color: var(--text);
+}
+
+.counter-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.05rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(12, 18, 30, 0.08);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-primary:focus, .btn-ghost:focus {
+  outline: 3px solid rgba(37,99,235,0.12);
+  outline-offset: 2px;
+}
+
+.sr-only { /* simple screen-reader-only helper */
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
